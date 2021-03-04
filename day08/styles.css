@@ -1,0 +1,120 @@
+.dice .face .num, .dice .number-1 .num1-1 {
+  border-radius: 50%;
+}
+
+* {
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+.guide {
+  margin: 50px auto;
+}
+
+.display-none {
+  display: none;
+}
+
+.dice {
+  height: 100px;
+  width: 100px;
+  margin: 50px auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.dice .face {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  background-color: bisque;
+  border: 2px solid gray;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transition-duration: 50ms;
+          transition-duration: 50ms;
+}
+
+.dice .face:active {
+  position: absolute;
+  top: -10px;
+  background-color: white;
+  -webkit-transform: rotateZ(360deg);
+          transform: rotateZ(360deg);
+}
+
+.dice .face .button {
+  width: 70%;
+  height: 30px;
+  line-height: 30px;
+  margin: auto;
+}
+
+.dice .face .num {
+  width: 20px;
+  height: 20px;
+  background-color: #000066;
+}
+
+.dice .face .num-center {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.dice .face .num-upper-right {
+  position: absolute;
+  top: 15%;
+  right: 15%;
+}
+
+.dice .face .num-upper-left {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+}
+
+.dice .face .num-lowwer-right {
+  position: absolute;
+  bottom: 15%;
+  right: 15%;
+}
+
+.dice .face .num-lowwer-left {
+  position: absolute;
+  bottom: 15%;
+  left: 15%;
+}
+
+.dice .face .num-middle-right {
+  position: absolute;
+  right: 15%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.dice .face .num-middle-left {
+  position: absolute;
+  left: 15%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.dice .number-1 .num1-1 {
+  width: 25px;
+  height: 25px;
+  background-color: red;
+}
+/*# sourceMappingURL=styles.css.map */

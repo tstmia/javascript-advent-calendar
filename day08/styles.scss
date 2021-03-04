@@ -1,0 +1,118 @@
+$dice-eyes: 15%;
+
+@mixin middleHeight {
+    top: 0;
+    bottom: 0;
+    margin: auto; 
+}
+
+%num-def {
+    border-radius: 50%;
+}
+
+* {
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+.guide {
+    margin: 50px auto;
+}
+
+.display-none {
+    display: none;
+}
+
+.dice {
+    height: 100px;
+    width: 100px;
+    margin: 50px auto;
+    position: relative;
+    cursor: pointer;
+    .face {
+        width: 100%;
+        height: 100%;
+        border-radius: 10%;
+        background-color: bisque;
+        border: 2px solid gray;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition-duration: 50ms;
+        &:active {
+            position: absolute;
+            top: -10px;
+            background-color: white;
+            transform: rotateZ(360deg);
+        }
+        .button {
+            width: 70%;
+            height: 30px;
+            line-height: 30px;
+            margin: auto;
+        }
+        .num {
+            @extend %num-def;
+            width: 20px;
+            height: 20px;
+            background-color: #000066;
+        }
+        .num-center {
+            position: absolute;
+            right: 0;
+            left: 0;
+            margin: auto; 
+            @include middleHeight;
+        }
+        .num-upper-right {
+            position: absolute;
+            top: $dice-eyes;
+            right: $dice-eyes;
+
+        }
+        .num-upper-left {
+            position: absolute;
+            top: $dice-eyes;
+            left: $dice-eyes;
+
+        }
+        .num-lowwer-right{
+            position: absolute;
+            bottom: $dice-eyes;
+            right: $dice-eyes;
+
+        }
+        .num-lowwer-left{
+            position: absolute;
+            bottom: $dice-eyes;
+            left: $dice-eyes;
+
+        }
+        .num-middle-right{
+            position: absolute;
+            right: $dice-eyes;
+            @include middleHeight;
+
+        }
+        .num-middle-left{
+            position: absolute;
+            left: $dice-eyes;
+            @include middleHeight;
+
+
+        }
+    }
+    .number-1 {
+        .num1-1 {
+            @extend %num-def;
+            width: 25px;
+            height: 25px;
+            background-color: red;
+        }
+    }
+}
