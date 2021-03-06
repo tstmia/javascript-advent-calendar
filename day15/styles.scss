@@ -1,0 +1,43 @@
+html {
+    font-size: 62.5%;
+    outline: none;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.container {
+    height: 100vh;
+    justify-content: center;
+    display:grid;
+    grid-template-columns: 3em 50% 3em;
+    grid-template-rows: 100vh;
+    .allow-icon {
+        cursor: pointer;
+        color: gray;
+        &:hover {
+            color:#000;
+            transition: 1s;
+        }
+    }
+    .previous{
+        grid-column: 1 / 2;
+        align-self: center;
+    }
+    .next {
+        grid-column: 3 / 4;
+        align-self: center;
+    }
+    .images-gallery {
+        grid-column: 2 / 3;
+        align-self: center;
+        .card {
+            width: 90%;
+            align-self: center;
+            margin: auto;
+            display: none;
+        }
+        .current-card {
+            display: block;
+        }
+    }
+}
