@@ -5,39 +5,46 @@ html {
     text-align: center;
 }
 
+@mixin allow-icon {
+    cursor: pointer;
+    color: gray;
+    &:hover {
+        color:#000;
+        transition: 1s;
+    }
+}
 .container {
     height: 100vh;
     justify-content: center;
     display:grid;
-    grid-template-columns: 3em 50% 3em;
+    grid-template-columns: 4em 50% 4em;
     grid-template-rows: 100vh;
-    .allow-icon {
-        cursor: pointer;
-        color: gray;
-        &:hover {
-            color:#000;
-            transition: 1s;
-        }
-    }
-    .previous{
+    .previous {
+        @include allow-icon;
         grid-column: 1 / 2;
         align-self: center;
+        margin-right: 5px;
     }
     .next {
+        @include allow-icon;
         grid-column: 3 / 4;
         align-self: center;
+        margin-left: 5px;
     }
     .images-gallery {
         grid-column: 2 / 3;
         align-self: center;
-        .card {
-            width: 90%;
-            align-self: center;
-            margin: auto;
-            display: none;
-        }
-        .current-card {
-            display: block;
+        overflow: hidden; // はみ出しを隠す
+        .images {
+            display: flex;
+            transition-duration: 1000ms;
+            transform: translateX(0);
+            transition-property: transform;
+            .card {
+                width: 100%;
+                align-self: center;
+                margin: auto;
+            }
         }
     }
 }

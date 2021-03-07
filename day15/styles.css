@@ -13,39 +13,46 @@ html {
           justify-content: center;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 3em 50% 3em;
-      grid-template-columns: 3em 50% 3em;
+  -ms-grid-columns: 4em 50% 4em;
+      grid-template-columns: 4em 50% 4em;
   -ms-grid-rows: 100vh;
       grid-template-rows: 100vh;
 }
 
-.container .allow-icon {
+.container .previous {
   cursor: pointer;
   color: gray;
-}
-
-.container .allow-icon:hover {
-  color: #000;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-.container .previous {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  margin-right: 5px;
+}
+
+.container .previous:hover {
+  color: #000;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .container .next {
+  cursor: pointer;
+  color: gray;
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3 / 4;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  margin-left: 5px;
+}
+
+.container .next:hover {
+  color: #000;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .container .images-gallery {
@@ -55,18 +62,28 @@ html {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  overflow: hidden;
 }
 
-.container .images-gallery .card {
-  width: 90%;
+.container .images-gallery .images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.container .images-gallery .images .card {
+  width: 100%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   margin: auto;
-  display: none;
-}
-
-.container .images-gallery .current-card {
-  display: block;
 }
 /*# sourceMappingURL=styles.css.map */
