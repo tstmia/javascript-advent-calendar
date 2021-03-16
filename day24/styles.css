@@ -37,15 +37,15 @@ section .discription {
   font-size: 18px;
 }
 
-section .test-aglity {
+section .test-agility {
   margin: 30px auto;
 }
 
-section .test-aglity p {
+section .test-agility p {
   font-weight: 800;
 }
 
-section .test-aglity button {
+section .test-agility button {
   margin: 10px auto;
   padding: 5px 10px;
 }
