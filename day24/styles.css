@@ -1,0 +1,52 @@
+html {
+  font-size: 62.5%;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+p {
+  margin: 10px auto;
+  font-size: 16px;
+}
+
+.non-display {
+  display: none;
+}
+
+.lose {
+  color: blue;
+}
+
+.win {
+  color: red;
+}
+
+section {
+  width: 75%;
+  margin: 50px auto;
+  padding: 0 100px;
+}
+
+section .discription {
+  font-size: 18px;
+}
+
+section .test-agility {
+  margin: 30px auto;
+}
+
+section .test-agility p {
+  font-weight: 800;
+}
+
+section .test-agility button {
+  margin: 10px auto;
+  padding: 5px 10px;
+}
+/*# sourceMappingURL=styles.css.map */
