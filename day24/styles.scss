@@ -12,6 +12,15 @@ p {
     margin: 10px auto;
     font-size: 16px
 }
+.non-display {
+    display: none;
+}
+.lose {
+    color: blue;
+}
+.win {
+    color: red;
+}
 section {
     width: 75%;
     margin: 50px auto;
